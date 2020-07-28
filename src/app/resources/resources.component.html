@@ -1,0 +1,16 @@
+<p>resources works!</p>
+
+<div class="form-group">
+    <label for="resourceName">ResourceName</label>
+    <input type="input" class="form-control" id="resourceName" (input)="resouceNameValue($event)"
+        aria-describedby="resourceNameHelp" />
+    <!-- <input type="input" class="form-control" 
+           id="resourceName" 
+           [(ngModel)]="resourceName"
+           aria-describedby="resourceNameHelp" /> -->
+    <small id="resourceNameHelp" class="form-text text-muted">Your input is {{resourceName}}</small>
+</div>
+
+<button class="btn btn-primary" [disabled]="!disableAddNewResourceBttn" (click)="addNewResource()">Add New
+    Resource</button>
+<small class="form-text text-muted">Button Enabled <b>{{disableAddNewResourceBttn}}</b></small>
